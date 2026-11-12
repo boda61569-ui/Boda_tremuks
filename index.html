@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Termux Store — متجر أدوات تريمكس وبايثون</title>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="bg-animation">
+  <span class="particle"></span>
+  <span class="particle"></span>
+  <span class="particle"></span>
+  <span class="particle"></span>
+  <span class="particle"></span>
+  <span class="particle"></span>
+  <span class="particle"></span>
+  <span class="particle"></span>
+  <span class="particle"></span>
+  <span class="particle"></span>
+</div>
+
+<nav class="navbar">
+
+  <div class="logo">
+    ⚡ Termux Store
+  </div>
+
+  <div class="nav-links">
+    <a href="#" class="nav-btn active" data-page="home">
+      الرئيسية
+    </a>
+
+    <a href="#" class="nav-btn" data-page="store">
+      المتجر
+    </a>
+
+    <a href="#" class="nav-btn" data-page="about">
+      عن الموقع
+    </a>
+  </div>
+
+</nav>
+
+
+<main>
+
+<section id="page-home" class="page active">
+
+  <div class="hero">
+
+    <div class="hero-content">
+
+      <div class="hero-icon">
+        ⚡
+      </div>
+
+      <h1>
+        أهلاً بيك في
+        <span>Termux Store</span>
+      </h1>
+
+      <p>
+        متجر بسيط لأدوات Termux و Python
+        وأوامر مفيدة للمبرمجين والمبتدئين
+      </p>
+
+      <button
+        class="main-btn nav-btn"
+        data-page="store">
+        🚀 تصفح الأدوات
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="page-store" class="page">
+
+  <div class="store-container">
+
+    <div class="section-title">
+      <h2>🛠️ متجر الأدوات</h2>
+
+      <p>
+        اختار الأداة وشوف تفاصيلها وأمر التثبيت
+      </p>
+    </div>
+
+
+    <div class="search-box">
+
+      <span>🔎</span>
+
+      <input
+        type="text"
+        id="search"
+        placeholder="ابحث عن أداة..."
+      >
+
+    </div>
+
+
+    <div class="filters">
+
+      <button
+        class="filter-btn active"
+        data-filter="all">
+        الكل
+      </button>
+
+      <button
+        class="filter-btn"
+        data-filter="termux">
+        Termux
+      </button>
+
+      <button
+        class="filter-btn"
+        data-filter="python">
+        Python
+      </button>
+
+    </div>
+
+
+    <div id="toolsGrid" class="tools-grid">
+
+
+      <!-- Python -->
+      <div
+        class="tool-card"
+        data-name="python"
+        data-cat="python">
+
+        <div class="tool-icon">🐍</div>
+
+        <h3>Python</h3>
+
+        <span class="badge python">
+          Python
+        </span>
+
+        <p>
+          لغة برمجة قوية وسهلة ومناسبة للمبتدئين.
+        </p>
+
+        <code>pkg install python</code>
+
+        <div class="card-actions">
+
+          <button class="copy-btn">
+            📋 نسخ
+          </button>
+
+          <button
+            class="details-btn"
+            data-tool="python">
+            📌 التفاصيل
+          </button>
+
+          <a
+            class="download-btn"
+            href="https://www.python.org/"
+            target="_blank">
+            🌐 الموقع الرسمي
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- Pip -->
+      <div
+        class="tool-card"
+        data-name="pip"
+        data-cat="python">
+
+        <div class="tool-icon">📦</div>
+
+        <h3>Pip</h3>
+
+        <span class="badge python">
+          Python
+        </span>
+
+        <p>
+          مدير حزم Python لتثبيت المكتبات.
+        </p>
+
+        <code>pip install package</code>
+
+        <div class="card-actions">
+
+          <button class="copy-btn">
+            📋 نسخ
+          </button>
+
+          <button
+            class="details-btn"
+            data-tool="pip">
+            📌 التفاصيل
+          </button>
+
+          <a
+            class="download-btn"
+            href="https://pip.pypa.io/"
+            target="_blank">
+            🌐 الموقع الرسمي
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- Git -->
+      <div
+        class="tool-card"
+        data-name="git"
+        data-cat="termux">
+
+        <div class="tool-icon">🔧</div>
+
+        <h3>Git</h3>
+
+        <span class="badge termux">
+          Termux
+        </span>
+
+        <p>
+          نظام للتحكم في إصدارات المشاريع البرمجية.
+        </p>
+
+        <code>pkg install git</code>
+
+        <div class="card-actions">
+
+          <button class="copy-btn">
+            📋 نسخ
+          </button>
+
+          <button
+            class="details-btn"
+            data-tool="git">
+            📌 التفاصيل
+          </button>
+
+          <a
+            class="download-btn"
+            href="https://git-scm.com/"
+            target="_blank">
+            🌐 الموقع الرسمي
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- Curl -->
+      <div
+        class="tool-card"
+        data-name="curl"
+        data-cat="termux">
+
+        <div class="tool-icon">🌐</div>
+
+        <h3>Curl</h3>
+
+        <span class="badge termux">
+          Termux
+        </span>
+
+        <p>
+          أداة للتعامل مع الروابط والطلبات الشبكية.
+        </p>
+
+        <code>pkg install curl</code>
+
+        <div class="card-actions">
+
+          <button class="copy-btn">
+            📋 نسخ
+          </button>
+
+          <button
+            class="details-btn"
+            data-tool="curl">
+            📌 التفاصيل
+          </button>
+
+          <a
+            class="download-btn"
+            href="https://curl.se/"
+            target="_blank">
+            🌐 الموقع الرسمي
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- Wget -->
+      <div
+        class="tool-card"
+        data-name="wget"
+        data-cat="termux">
+
+        <div class="tool-icon">⬇️</div>
+
+        <h3>Wget</h3>
+
+        <span class="badge termux">
+          Termux
+        </span>
+
+        <p>
+          تحميل الملفات من الإنترنت باستخدام الطرفية.
+        </p>
+
+        <code>pkg install wget</code>
+
+        <div class="card-actions">
+
+          <button class="copy-btn">
+            📋 نسخ
+          </button>
+
+          <button
+            class="details-btn"
+            data-tool="wget">
+            📌 التفاصيل
+          </button>
+
+          <a
+            class="download-btn"
+            href="https://www.gnu.org/software/wget/"
+            target="_blank">
+            🌐 الموقع الرسمي
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- Nano -->
+      <div
+        class="tool-card"
+        data-name="nano"
+        data-cat="termux">
+
+        <div class="tool-icon">📝</div>
+
+        <h3>Nano</h3>
+
+        <span class="badge termux">
+          Termux
+        </span>
+
+        <p>
+          محرر نصوص بسيط يعمل من داخل Termux.
+        </p>
+
+        <code>pkg install nano</code>
+
+        <div class="card-actions">
+
+          <button class="copy-btn">
+            📋 نسخ
+          </button>
+
+          <button
+            class="details-btn"
+            data-tool="nano">
+            📌 التفاصيل
+          </button>
+
+          <a
+            class="download-btn"
+            href="https://www.nano-editor.org/"
+            target="_blank">
+            🌐 الموقع الرسمي
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- Vim -->
+      <div
+        class="tool-card"
+        data-name="vim"
+        data-cat="termux">
+
+        <div class="tool-icon">⌨️</div>
+
+        <h3>Vim</h3>
+
+        <span class="badge termux">
+          Termux
+        </span>
+
+        <p>
+          محرر نصوص متقدم للمستخدمين.
+        </p>
+
+        <code>pkg install vim</code>
+
+        <div class="card-actions">
+
+          <button class="copy-btn">
+            📋 نسخ
+          </button>
+
+          <button
+            class="details-btn"
+            data-tool="vim">
+            📌 التفاصيل
+          </button>
+
+          <a
+            class="download-btn"
+            href="https://www.vim.org/"
+            target="_blank">
+            🌐 الموقع الرسمي
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- Htop -->
+      <div
+        class="tool-card"
+        data-name="htop"
+        data-cat="termux">
+
+        <div class="tool-icon">📊</div>
+
+        <h3>Htop</h3>
+
+        <span class="badge termux">
+          Termux
+        </span>
+
+        <p>
+          عرض ومراقبة العمليات واستهلاك موارد الجهاز.
+        </p>
+
+        <code>pkg install htop</code>
+
+        <div class="card-actions">
+
+          <button class="copy-btn">
+            📋 نسخ
+          </button>
+
+          <button
+            class="details-btn"
+            data-tool="htop">
+            📌 التفاصيل
+          </button>
+
+          <a
+            class="download-btn"
+            href="https://htop.dev/"
+            target="_blank">
+            🌐 الموقع الرسمي
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- Node -->
+      <div
+        class="tool-card"
+        data-name="node"
+        data-cat="termux">
+
+        <div class="tool-icon">🟢</div>
+
+        <h3>Node.js</h3>
+
+        <span class="badge termux">
+          Termux
+        </span>
+
+        <p>
+          تشغيل JavaScript خارج المتصفح.
+        </p>
+
+        <code>pkg install nodejs</code>
+
+        <div class="card-actions">
+
+          <button class="copy-btn">
+            📋 نسخ
+          </button>
+
+          <button
+            class="details-btn"
+            data-tool="node">
+            📌 التفاصيل
+          </button>
+
+          <a
+            class="download-btn"
+            href="https://nodejs.org/"
+            target="_blank">
+            🌐 الموقع الرسمي
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- Requests -->
+      <div
+        class="tool-card"
+        data-name="requests"
+        data-cat="python">
+
+        <div class="tool-icon">🌐</div>
+
+        <h3>Requests</h3>
+
+        <span class="badge python">
+          Python
+        </span>
+
+        <p>
+          مكتبة Python للتعامل مع HTTP requests.
+        </p>
+
+        <code>pip install requests</code>
+
+        <div class="card-actions">
+
+          <button class="copy-btn">
+            📋 نسخ
+          </button>
+
+          <button
+            class="details-btn"
+            data-tool="requests">
+            📌 التفاصيل
+          </button>
+
+          <a
+            class="download-btn"
+            href="https://requests.readthedocs.io/"
+            target="_blank">
+            🌐 الموقع الرسمي
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- BeautifulSoup -->
+      <div
+        class="tool-card"
+        data-name="beautifulsoup"
+        data-cat="python">
+
+        <div class="tool-icon">🍲</div>
+
+        <h3>BeautifulSoup</h3>
+
+        <span class="badge python">
+          Python
+        </span>
+
+        <p>
+          مكتبة لتحليل صفحات HTML واستخراج البيانات.
+        </p>
+
+        <code>pip install beautifulsoup4</code>
+
+        <div class="card-actions">
+
+          <button class="copy-btn">
+            📋 نسخ
+          </button>
+
+          <button
+            class="details-btn"
+            data-tool="beautifulsoup">
+            📌 التفاصيل
+          </button>
+
+          <a
+            class="download-btn"
+            href="https://www.crummy.com/software/BeautifulSoup/"
+            target="_blank">
+            🌐 الموقع الرسمي
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- Flask -->
+      <div
+        class="tool-card"
+        data-name="flask"
+        data-cat="python">
+
+        <div class="tool-icon">🧪</div>
+
+        <h3>Flask</h3>
+
+        <span class="badge python">
+          Python
+        </span>
+
+        <p>
+          إطار عمل خفيف لبناء تطبيقات الويب باستخدام Python.
+        </p>
+
+        <code>pip install flask</code>
+
+        <div class="card-actions">
+
+          <button class="copy-btn">
+            📋 نسخ
+          </button>
+
+          <button
+            class="details-btn"
+            data-tool="flask">
+            📌 التفاصيل
+          </button>
+
+          <a
+            class="download-btn"
+            href="https://flask.palletsprojects.com/"
+            target="_blank">
+            🌐 الموقع الرسمي
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- PyGame -->
+      <div
+        class="tool-card"
+        data-name="pygame"
+        data-cat="python">
+
+        <div class="tool-icon">🎮</div>
+
+        <h3>PyGame</h3>
+
+        <span class="badge python">
+          Python
+        </span>
+
+        <p>
+          مكتبة Python لصناعة الألعاب والتطبيقات التفاعلية.
+        </p>
+
+        <code>pip install pygame</code>
+
+        <div class="card-actions">
+
+          <button class="copy-btn">
+            📋 نسخ
+          </button>
+
+          <button
+            class="details-btn"
+            data-tool="pygame">
+            📌 التفاصيل
+          </button>
+
+          <a
+            class="download-btn"
+            href="https://www.pygame.org/"
+            target="_blank">
+            🌐 الموقع الرسمي
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- Django -->
+      <div
+        class="tool-card"
+        data-name="django"
+        data-cat="python">
+
+        <div class="tool-icon">🚀</div>
+
+        <h3>Django</h3>
+
+        <span class="badge python">
+          Python
+        </span>
+
+        <p>
+          إطار عمل قوي لبناء مواقع وتطبيقات الويب.
+        </p>
+
+        <code>pip install django</code>
+
+        <div class="card-actions">
+
+          <button class="copy-btn">
+            📋 نسخ
+          </button>
+
+          <button
+            class="details-btn"
+            data-tool="django">
+            📌 التفاصيل
+          </button>
+
+          <a
+            class="download-btn"
+            href="https://www.djangoproject.com/"
+            target="_blank">
+            🌐 الموقع الرسمي
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div id="noResults" class="no-results">
+      😕 مفيش أدوات مطابقة للبحث
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="page-about" class="page">
+
+  <div class="about-box">
+
+    <h2>ℹ️ عن Termux Store</h2>
+
+    <p>
+      Termux Store مشروع تعليمي بسيط
+      لمساعدة المبتدئين في الوصول لأدوات
+      من صنع بودا ءال مصيبةة وأوامر مفيدة لـ Termux و Python.
+    </p>
+
+    <p>
+      ⚡ اتعلم وبرمج وطوّر نفسك.
+    </p>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<!-- نافذة التفاصيل -->
+
+<div id="toolModal" class="modal">
+
+  <div class="modal-content">
+
+    <button id="closeModal" class="close-modal">
+      ×
+    </button>
+
+    <div id="modalIcon" class="modal-icon">
+      🛠️
+    </div>
+
+    <h2 id="modalTitle">
+      اسم الأداة
+    </h2>
+
+    <span id="modalCategory" class="badge">
+      Python
+    </span>
+
+    <p id="modalDescription">
+      وصف الأداة
+    </p>
+
+    <div class="detail-section">
+
+      <h3>📥 أمر التثبيت</h3>
+
+      <div class="command-box">
+
+        <code id="modalInstall">
+          pkg install python
+        </code>
+
+        <button id="modalCopyInstall">
+          📋 نسخ
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <div class="detail-section">
+
+      <h3>💻 طريقة الاستخدام</h3>
+
+      <div class="usage-box">
+
+        <code id="modalUsage">
+          python
+        </code>
+
+      </div>
+
+    </div>
+
+
+    <div class="modal-buttons">
+
+      <a
+        id="modalOfficial"
+        href="#"
+        target="_blank"
+        class="download-btn">
+        🌐 الموقع الرسمي
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<footer>
+
+  <p>
+    ⚡ Termux Store © 2026_بودا ءال مصيبةة بيحبك ف لله 😍👻
+  </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
